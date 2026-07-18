@@ -19,9 +19,12 @@
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active" data-target="home"><i class="fa-solid fa-house"></i> Beranda</a></li>
+            <li><a href="#" data-target="pre-requisite"><i class="fa-solid fa-list-check"></i> Pre-requisite</a></li>
             <li><a href="#" data-target="verbal-nominal"><i class="fa-solid fa-scale-balanced"></i> Verbal & Nominal</a></li>
             <li><a href="#" data-target="part-of-speech"><i class="fa-solid fa-puzzle-piece"></i> Part of Speech</a></li>
             <li><a href="#" data-target="tenses"><i class="fa-solid fa-clock"></i> 16 Tenses</a></li>
+            <li><a href="#" data-target="modal-auxiliary"><i class="fa-solid fa-key"></i> Modal Auxiliary</a></li>
+            <li><a href="#" data-target="passive-voice"><i class="fa-solid fa-right-left"></i> Passive Voice</a></li>
             <li><a href="#" data-target="quiz"><i class="fa-solid fa-clipboard-question"></i> Latihan Soal</a></li>
         </ul>
     </nav>
@@ -47,6 +50,11 @@
                     </div>
                 </div>
                 <div class="features">
+                    <div class="feature-card nav-btn" data-target="pre-requisite" style="cursor: pointer;">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h3>Pre-requisite</h3>
+                        <p>Kuasai pondasi dasar auxiliary verb, to be, dan subject-verb agreement.</p>
+                    </div>
                     <div class="feature-card nav-btn" data-target="verbal-nominal" style="cursor: pointer;">
                         <i class="fa-solid fa-scale-balanced"></i>
                         <h3>Verbal vs Nominal</h3>
@@ -62,8 +70,287 @@
                         <h3>16 Tenses</h3>
                         <p>Pelajari 16 bentuk waktu lengkap dengan rumus dan contoh.</p>
                     </div>
+                    <div class="feature-card nav-btn" data-target="modal-auxiliary" style="cursor: pointer;">
+                        <i class="fa-solid fa-key"></i>
+                        <h3>Modal Auxiliary</h3>
+                        <p>Pelajari kata bantu untuk menyatakan kemampuan, keharusan, izin, dan saran.</p>
+                    </div>
+                    <div class="feature-card nav-btn" data-target="passive-voice" style="cursor: pointer;">
+                        <i class="fa-solid fa-right-left"></i>
+                        <h3>Passive Voice</h3>
+                        <p>Pahami cara membuat kalimat pasif di mana subjek dikenai tindakan.</p>
+                    </div>
                 </div>
             </section>
+
+            <!-- Section: Pre-requisite -->
+            <section id="pre-requisite" class="page-section">
+
+  <style>
+    /* Tambahan khusus untuk tabel — belum ada di stylesheet utama */
+    #pre-requisite table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    #pre-requisite th, #pre-requisite td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    #pre-requisite th {
+      background-color: var(--primary);
+      color: var(--white);
+      font-weight: 600;
+    }
+    #pre-requisite td {
+      background-color: var(--white);
+    }
+    #pre-requisite td.subject {
+      text-align: left;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    #pre-requisite .note-box {
+      background-color: #e0e7ff;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      color: var(--dark);
+    }
+  </style>
+
+  <div class="section-header">
+    <h1>Materi Pre-requisite</h1>
+    <p>Sebelum belajar Verbal &amp; Nominal dan 16 Tenses, kuasai dulu pondasi berikut.</p>
+  </div>
+
+  <div class="note-box">
+    <strong>Catatan penempatan:</strong> Materi ini sebaiknya diletakkan sebelum halaman "Verbal &amp; Nominal", karena memahami kalimat nominal membutuhkan pemahaman To Be terlebih dahulu.
+  </div>
+
+  <!-- 0. Tabel Ringkasan Auxiliary Verb -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-table"></i> 0. Tabel Ringkasan Auxiliary Verb</h2>
+    <p>Auxiliary verb (kata kerja bantu) berubah bentuk mengikuti subject. Ini tabel paling penting untuk dihafal di awal — akan terus dipakai di semua materi tenses.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>is/are/am</th>
+          <th>do/does</th>
+          <th>has/have</th>
+          <th>was/were</th>
+          <th>did</th>
+          <th>had</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="subject">I</td>
+          <td>am</td><td>do</td><td>have</td><td>was</td><td>did</td><td>had</td>
+        </tr>
+        <tr>
+          <td class="subject">He / She / It</td>
+          <td>is</td><td>does</td><td>has</td><td>was</td><td>did</td><td>had</td>
+        </tr>
+        <tr>
+          <td class="subject">You / We / They</td>
+          <td>are</td><td>do</td><td>have</td><td>were</td><td>did</td><td>had</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <strong>Cara membaca tabel:</strong>
+      <ul>
+        <li>Baris <strong>I</strong> selalu punya bentuk sendiri: am, do, have, was, did, had</li>
+        <li>Baris <strong>He/She/It</strong> (tunggal) selalu pakai: is, does, has, was, did, had</li>
+        <li>Baris <strong>You/We/They</strong> (jamak) selalu pakai: are, do, have, were, did, had</li>
+      </ul>
+      <hr>
+      <strong>Kegunaan masing-masing kelompok:</strong>
+      <ul>
+        <li><strong>is/are/am, was/were</strong> → kalimat nominal, Continuous Tense, Passive Voice</li>
+        <li><strong>do/does, did</strong> → negatif &amp; tanya di Simple Present/Past (kalimat verbal)</li>
+        <li><strong>has/have, had</strong> → membentuk Perfect Tense</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1. To Be -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-book"></i> 1. Penggunaan To Be (is / am / are / was / were)</h2>
+    <p><strong>To Be</strong> wajib ada di <strong>kalimat nominal</strong> (predikatnya bukan kata kerja), dan juga muncul di beberapa tenses tertentu (Continuous dan Passive).</p>
+
+    <table>
+      <thead><tr><th>Subject</th><th>Present</th><th>Past</th></tr></thead>
+      <tbody>
+        <tr><td class="subject">I</td><td>am</td><td>was</td></tr>
+        <tr><td class="subject">You / We / They</td><td>are</td><td>were</td></tr>
+        <tr><td class="subject">He / She / It</td><td>is</td><td>was</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grid-2 mt-20">
+      <div class="info-card">
+        <h4>a. Sebagai predikat utama (kalimat nominal)</h4>
+        <p>Digunakan ketika predikat berupa Noun, Adjective, atau Adverb — bukan kata kerja.</p>
+        <ul>
+          <li>I <strong>am</strong> a student. <em>(noun)</em></li>
+          <li>She <strong>is</strong> beautiful. <em>(adjective)</em></li>
+          <li>They <strong>were</strong> at school. <em>(adverb of place)</em></li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>b. Sebagai kata kerja bantu (auxiliary)</h4>
+        <p>Digunakan bersama Verb-ing (Continuous) atau Verb-3 (Passive).</p>
+        <ul>
+          <li>She <strong>is</strong> reading a book now.</li>
+          <li>The letter <strong>was</strong> written by him.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <strong>Kesalahan Umum Pemula</strong>
+      <p>❌ <em>She is go to school.</em> — To Be tidak boleh langsung diikuti V1</p>
+      <p>✅ <em>She is going to school.</em> (To Be + V-ing)</p>
+      <p>✅ <em>She goes to school.</em> (tanpa To Be, pakai V1+s/es)</p>
+      <hr>
+      <p><strong>Aturan Penting:</strong> Dalam kalimat verbal simple, jangan gabungkan To Be dengan V1/V2 tanpa akhiran -ing atau -ed.</p>
+    </div>
+  </div>
+
+  <!-- 2. V1/s/es -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-pen"></i> 2. Aturan Penggunaan V1 / V1+s/es</h2>
+    <p>V1 (bentuk dasar) digunakan dalam <strong>Simple Present Tense</strong>. Bentuknya berubah tergantung subject.</p>
+
+    <table>
+      <thead><tr><th>Subject</th><th>Bentuk Verb</th><th>Contoh</th></tr></thead>
+      <tbody>
+        <tr><td class="subject">I, You, We, They</td><td>V1 (tanpa tambahan)</td><td>I play, They eat</td></tr>
+        <tr><td class="subject">He, She, It</td><td>V1 + s/es</td><td>She plays, It eats</td></tr>
+      </tbody>
+    </table>
+
+    <div class="formula-box mt-20">
+      <ul>
+        <li> 1. Jika Verb berakhiran <strong>ss, sh, ch ,x , o, z </strong> maka verb ditambahkan <strong>+es</strong> : 
+            <p>kiss → kisses</p><p>wash → washes</p><p>watch → watches</p><p>box  → boxes</p><p>go → goes</p><p>buzz → buzzes</p></li>
+        <li> 2. Jika Verb berakhiran <strong>konsonan + y </strong> maka huruf y dihilangkan lalu ditambahkan <strong>+ies</strong> : 
+            <p>fly → flies</p><p>cry → cries</p></li>
+        <li> 3. Jika tidak termasuk dalam kategori di atas, maka gunakan <strong>+s</strong> :  <p>buy → buys</p><p>eat → eats</p><p>drink → drinks</p></li>
+      </ul>
+    </div>
+
+    <div class="example-box">
+      <strong>Kesalahan Umum Pemula</strong>
+      <p>❌ <em>She play badminton.</em> → ✅ <em>She plays badminton.</em></p>
+      <p>❌ <em>He watchs TV.</em> → ✅ <em>He watches TV.</em></p>
+    </div>
+  </div>
+
+  <!-- 3. Subject-Verb Agreement -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-equals"></i> 3. Subject-Verb Agreement</h2>
+    <p>Bentuk kata kerja (atau To Be) harus sesuai dengan jenis subject-nya: tunggal atau jamak.</p>
+
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>Subject Tunggal</h4>
+        <p>Verb + s/es, atau To Be: is/was</p>
+        <p>The cat <strong>sleeps</strong> all day.<br>My brother <strong>is</strong> a doctor.</p>
+      </div>
+      <div class="info-card">
+        <h4>Subject Jamak</h4>
+        <p>Verb tanpa s/es, atau To Be: are/were</p>
+        <p>The cats <strong>sleep</strong> all day.<br>My brothers <strong>are</strong> doctors.</p>
+      </div>
+    </div>
+
+    <table class="mt-20">
+      <thead><tr><th>Situasi</th><th>Aturan</th><th>Contoh</th></tr></thead>
+      <tbody>
+        <tr><td>Subject + "and"</td><td>Dianggap jamak</td><td>Tom and Jerry <strong>play</strong> football.</td></tr>
+        <tr><td>Subject + "or/nor"</td><td>Verb ikut subject terdekat</td><td>Neither the teacher nor the students <strong>were</strong> ready.</td></tr>
+        <tr><td>Uncountable noun</td><td>Dianggap tunggal</td><td>The information <strong>is</strong> correct.</td></tr>
+        <tr><td>everyone, somebody, each, either</td><td>Selalu tunggal</td><td>Everyone <strong>likes</strong> the movie.</td></tr>
+        <tr><td>news, mathematics, physics</td><td>Dianggap tunggal</td><td>The news <strong>is</strong> shocking.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <strong>Kesalahan Umum Pemula</strong>
+      <p>❌ <em>Everyone are happy.</em> → ✅ <em>Everyone is happy.</em></p>
+      <p>❌ <em>My parents is at home.</em> → ✅ <em>My parents are at home.</em></p>
+    </div>
+  </div>
+
+  <!-- 4. Do/Does/Did -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-circle-question"></i> 4. Penggunaan Do / Does / Did</h2>
+    <p>Dipakai di kalimat <strong>verbal</strong> untuk membuat bentuk negatif dan tanya pada Simple Present &amp; Simple Past. Setelah do/does/did, verb selalu kembali ke V1.</p>
+
+    <table>
+      <thead><tr><th>Subject</th><th>Simple Present</th><th>Simple Past</th></tr></thead>
+      <tbody>
+        <tr><td class="subject">I / You / We / They</td><td>do</td><td>did</td></tr>
+        <tr><td class="subject">He / She / It</td><td>does</td><td>did</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <p>(-) She <strong>does not</strong> play badminton.</p>
+      <p>(?) <strong>Do</strong> you <strong>like</strong> coffee?</p>
+      <p>(-) They <strong>did not</strong> go to school yesterday.</p>
+      <p>(?) <strong>Did</strong> he <strong>finish</strong> his homework?</p>
+      <hr>
+      <p>❌ <em>She does not plays badminton.</em> → ✅ <em>She does not play badminton.</em></p>
+    </div>
+  </div>
+
+  <!-- 5. Has/Have/Had -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-check-double"></i> 5. Penggunaan Has / Have / Had</h2>
+    <p>Dipakai sebagai auxiliary untuk membentuk <strong>Perfect Tense</strong>, selalu diikuti V3 (Past Participle).</p>
+
+    <table>
+      <thead><tr><th>Subject</th><th>Present Perfect</th><th>Past Perfect</th></tr></thead>
+      <tbody>
+        <tr><td class="subject">I / You / We / They</td><td>have</td><td>had</td></tr>
+        <tr><td class="subject">He / She / It</td><td>has</td><td>had</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <p>She <strong>has finished</strong> her homework. <em>(has + V3)</em></p>
+      <p>I <strong>have visited</strong> Bali twice. <em>(have + V3)</em></p>
+      <p>They <strong>had left</strong> before I arrived. <em>(had + V3)</em></p>
+      <hr>
+      <p><em>Catatan: has/have/had juga bisa berarti "punya/memiliki" (kata kerja biasa) — beda dari fungsi auxiliary Perfect Tense.</em></p>
+    </div>
+  </div>
+
+  <!-- Cheat Sheet -->
+  <div class="ref-answer-box">
+    <h4><i class="fa-solid fa-lightbulb"></i> Ringkasan Cepat (Cheat Sheet)</h4>
+    <ul>
+      <li><strong>To Be</strong> wajib jika predikat bukan kata kerja, dan sebagai auxiliary V-ing/V3.</li>
+      <li><strong>V1 + s/es</strong> hanya untuk He/She/It di Simple Present.</li>
+      <li><strong>Subject-Verb Agreement</strong>: tunggal → verb+s/is/was/does/has, jamak → verb polos/are/were/do/have.</li>
+      <li><strong>Do/Does/Did</strong> untuk negatif &amp; tanya kalimat verbal, diikuti V1.</li>
+      <li><strong>Has/Have/Had</strong> untuk Perfect Tense, diikuti V3.</li>
+    </ul>
+  </div>
+
+</section>
 
             <!-- Section: Verbal & Nominal -->
             <section id="verbal-nominal" class="page-section">
@@ -265,6 +552,441 @@
                 </div>
             </section>
 
+            <!-- Section: Modal Auxiliary -->
+            <section id="modal-auxiliary" class="page-section">
+
+  <style>
+    /* Tambahan khusus untuk tabel — belum ada di stylesheet utama */
+    #modal-auxiliary table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    #modal-auxiliary th, #modal-auxiliary td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    #modal-auxiliary th {
+      background-color: var(--primary);
+      color: var(--white);
+      font-weight: 600;
+    }
+    #modal-auxiliary td {
+      background-color: var(--white);
+    }
+    #modal-auxiliary td.center {
+      text-align: center;
+    }
+    #modal-auxiliary .note-box {
+      background-color: #e0e7ff;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      color: var(--dark);
+    }
+  </style>
+
+  <div class="section-header">
+    <h1>Modal Auxiliary &amp; Semi-Modal</h1>
+    <p>Kata kerja bantu untuk menyatakan kemampuan, izin, kemungkinan, keharusan, dan saran.</p>
+  </div>
+
+  <div class="note-box">
+    <strong>Catatan penempatan:</strong> Materi ini diletakkan setelah halaman "16 Tenses", karena modal sering dikombinasikan dengan pemahaman waktu (present/past) yang sudah dipelajari di tenses.
+  </div>
+
+  <!-- 1. Definisi -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-circle-info"></i> 1. Definisi</h2>
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>Modal Auxiliary</h4>
+        <p>Kata kerja bantu untuk menyatakan kemampuan, izin, kemungkinan, keharusan, atau saran. Selalu diikuti <strong>V1 (bare infinitive)</strong> — tanpa to, tanpa s/es, tanpa -ing.</p>
+      </div>
+      <div class="info-card">
+        <h4>Semi-Modal (Marginal Modal)</h4>
+        <p>Kata kerja bantu yang fungsinya mirip modal, tapi berupa <strong>frasa</strong> (lebih dari satu kata) dan cara pemakaiannya sedikit berbeda — sebagian boleh berubah bentuk dan diikuti "to".</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Daftar -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-list"></i> 2. Daftar Modal Auxiliary dan Semi-Modal</h2>
+
+    <h4>a. Modal Auxiliary (Kata Tunggal)</h4>
+    <table>
+      <thead><tr><th>Modal</th><th>Bentuk Past/Polite</th></tr></thead>
+      <tbody>
+        <tr><td>Can</td><td>Could</td></tr>
+        <tr><td>May</td><td>Might</td></tr>
+        <tr><td>Will</td><td>Would</td></tr>
+        <tr><td>Shall</td><td>Should</td></tr>
+        <tr><td>Must</td><td>— <em>(tidak punya bentuk past)</em></td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="mt-20">b. Semi-Modal Auxiliary (Berupa Frasa)</h4>
+    <table>
+      <thead><tr><th>Semi-Modal</th><th>Bentuk Past</th></tr></thead>
+      <tbody>
+        <tr><td>Have to / Has to</td><td>Had to</td></tr>
+        <tr><td>Need to</td><td>Needed to</td></tr>
+        <tr><td>Ought to</td><td>—</td></tr>
+        <tr><td>Used to</td><td><em>(sudah menyatakan kebiasaan masa lalu)</em></td></tr>
+        <tr><td>Be going to</td><td>Was/Were going to</td></tr>
+        <tr><td>Be able to</td><td>Was/Were able to</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. Aturan -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-gavel"></i> 3. Aturan Modal dan Semi-Modal</h2>
+
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>Aturan Modal Auxiliary</h4>
+        <ul>
+          <li>Tidak berubah bentuk, meski subject He/She/It (tidak ada tambahan -s)</li>
+          <li>Selalu diikuti V1 — tidak boleh V1+s, V-ing, atau to+V1</li>
+          <li>Tidak boleh digabung dua modal sekaligus (❌ she will can go)</li>
+          <li>Negatif langsung tambahkan "not" setelah modal, tanpa do/does/did</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>Aturan Semi-Modal Auxiliary</h4>
+        <ul>
+          <li>Boleh berubah bentuk mengikuti subject (has to, is going to)</li>
+          <li>Diikuti "to" + V1, bukan langsung V1 (kecuali "used to")</li>
+          <li>Negatif/tanya sebagian pakai do/does/did (have to, need to, ought to)</li>
+          <li>Negatif/tanya sebagian pakai to be (be going to, be able to)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <strong>Contoh perbandingan:</strong>
+      <p>✅ <em>She must go.</em> (Modal, langsung V1, tanpa to)</p>
+      <p>✅ <em>She has to go.</em> (Semi-Modal, pakai "to"+V1, berubah jadi "has")</p>
+    </div>
+  </div>
+
+  <!-- 4. Pola Rumus -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-square-root-variable"></i> 4. Pola Rumus</h2>
+
+    <h4>Rumus Modal Auxiliary</h4>
+    <div class="formula-box">
+      <ul>
+        <li><strong>(+)</strong> Subject + Modal + V1 + (Object/Complement)</li>
+        <li><strong>(-)</strong> Subject + Modal + not + V1</li>
+        <li><strong>(?)</strong> Modal + Subject + V1?</li>
+      </ul>
+    </div>
+    <div class="example-box">
+      <p>(+) She <strong>can swim</strong>.</p>
+      <p>(-) She <strong>cannot (can't) swim</strong>.</p>
+      <p>(?) <strong>Can</strong> she <strong>swim</strong>?</p>
+    </div>
+
+    <h4 class="mt-20">Rumus Semi-Modal Auxiliary</h4>
+    <div class="formula-box">
+      <ul>
+        <li><strong>(+)</strong> Subject + Semi-Modal (to be/do/does/did bagian) + to + V1</li>
+        <li><strong>(-)</strong> Subject + do/does/did/to be + not + Semi-Modal + to + V1</li>
+        <li><strong>(?)</strong> Do/Does/Did/To be + Subject + Semi-Modal + to + V1?</li>
+      </ul>
+    </div>
+    <div class="example-box">
+      <p><strong>Have to:</strong></p>
+      <p>(+) She <strong>has to</strong> work.</p>
+      <p>(-) She <strong>does not have to</strong> work.</p>
+      <p>(?) <strong>Does</strong> she <strong>have to</strong> work?</p>
+      <hr>
+      <p><strong>Be going to:</strong></p>
+      <p>(+) They <strong>are going to</strong> travel.</p>
+      <p>(-) They <strong>are not going to</strong> travel.</p>
+      <p>(?) <strong>Are</strong> they <strong>going to</strong> travel?</p>
+    </div>
+  </div>
+
+  <!-- 5. Fungsi -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-bullseye"></i> 5. Fungsi Masing-Masing</h2>
+
+    <h4>Modal Auxiliary</h4>
+    <table>
+      <thead><tr><th>Modal</th><th>Fungsi</th></tr></thead>
+      <tbody>
+        <tr><td>Can</td><td>Kemampuan, izin informal masa sekarang</td></tr>
+        <tr><td>Could</td><td>Kemampuan di masa lalu, permintaan sopan</td></tr>
+        <tr><td>May</td><td>Izin formal, kemungkinan (~50%)</td></tr>
+        <tr><td>Might</td><td>Kemungkinan kecil/ragu-ragu (~30%)</td></tr>
+        <tr><td>Will</td><td>Kemauan, janji, prediksi masa depan</td></tr>
+        <tr><td>Would</td><td>Bentuk lampau will (reported speech), tawaran sopan</td></tr>
+        <tr><td>Shall</td><td>Tawaran formal (biasanya dengan I/We)</td></tr>
+        <tr><td>Should</td><td>Saran atau nasihat</td></tr>
+        <tr><td>Must</td><td>Keharusan kuat (obligasi pribadi), kesimpulan logis</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <p>I <strong>can speak</strong> English. <em>(kemampuan)</em></p>
+      <p><strong>Could</strong> you help me? <em>(permintaan sopan)</em></p>
+      <p>It <strong>may rain</strong> this afternoon. <em>(kemungkinan)</em></p>
+      <p>You <strong>should study</strong> harder. <em>(saran)</em></p>
+      <p>He <strong>must be</strong> tired. <em>(kesimpulan logis)</em></p>
+    </div>
+
+    <h4 class="mt-20">Semi-Modal Auxiliary</h4>
+    <table>
+      <thead><tr><th>Semi-Modal</th><th>Fungsi</th></tr></thead>
+      <tbody>
+        <tr><td>Have to / Has to</td><td>Keharusan dari aturan/keadaan eksternal</td></tr>
+        <tr><td>Need to</td><td>Kebutuhan atau keharusan lebih ringan dari must</td></tr>
+        <tr><td>Ought to</td><td>Saran/nasihat, mirip should tapi lebih formal</td></tr>
+        <tr><td>Used to</td><td>Kebiasaan/kondisi masa lalu yang sudah tidak berlaku</td></tr>
+        <tr><td>Be going to</td><td>Rencana/prediksi berdasarkan bukti/tanda yang terlihat</td></tr>
+        <tr><td>Be able to</td><td>Kemampuan (pengganti can untuk bentuk future/perfect)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example-box">
+      <p>I <strong>have to wear</strong> a helmet. <em>(aturan, bukan keinginan sendiri)</em></p>
+      <p>You <strong>need to rest</strong>. <em>(kebutuhan)</em></p>
+      <p>She <strong>ought to apologize</strong>. <em>(nasihat formal)</em></p>
+      <p>He <strong>used to smoke</strong>, but he quit. <em>(kebiasaan masa lalu)</em></p>
+      <p>Look at the clouds — it <strong>is going to rain</strong>. <em>(prediksi berdasar bukti)</em></p>
+      <p>I <strong>will be able to finish</strong> this by Friday. <em>("can" tidak punya bentuk future)</em></p>
+    </div>
+  </div>
+
+  <!-- Perbandingan Must vs Have to -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-scale-balanced"></i> Perbandingan Penting: Must vs Have to</h2>
+    <table>
+      <thead><tr><th>Modal</th><th>Sumber Keharusan</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Must</strong></td><td>Keharusan dari pembicara sendiri (opini/perasaan pribadi)</td></tr>
+        <tr><td><strong>Have to</strong></td><td>Keharusan dari aturan/keadaan eksternal</td></tr>
+      </tbody>
+    </table>
+    <div class="example-box">
+      <p>I <strong>must finish</strong> this today. <em>(saya sendiri yang merasa harus)</em></p>
+      <p>I <strong>have to wear</strong> a helmet. <em>(karena aturan, bukan keinginan sendiri)</em></p>
+      <hr>
+      <p><strong>Catatan penting:</strong> Must tidak punya bentuk lampau. Untuk keharusan di masa lalu, gunakan <strong>had to</strong>.</p>
+      <p>❌ <em>Yesterday, I must go to the dentist.</em></p>
+      <p>✅ <em>Yesterday, I had to go to the dentist.</em></p>
+    </div>
+  </div>
+
+  <!-- Kesalahan Umum -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-triangle-exclamation"></i> Kesalahan Umum Pemula</h2>
+    <div class="example-box">
+      <p>❌ <em>She can speaks French.</em> → ✅ <em>She can speak French.</em></p>
+      <p>❌ <em>You should to study harder.</em> → ✅ <em>You should study harder.</em></p>
+      <p>❌ <em>She has go to work.</em> → ✅ <em>She has to go to work.</em></p>
+      <p>❌ <em>He musts go now.</em> → ✅ <em>He must go now.</em></p>
+    </div>
+  </div>
+
+  <!-- Cheat Sheet -->
+  <div class="ref-answer-box">
+    <h4><i class="fa-solid fa-lightbulb"></i> Ringkasan Cepat (Cheat Sheet)</h4>
+    <ul>
+      <li><strong>Modal</strong> (can, could, may, might, will, would, shall, should, must) → langsung diikuti V1, tanpa to, tidak berubah bentuk.</li>
+      <li><strong>Semi-Modal</strong> (have to, need to, ought to, used to, be going to, be able to) → diikuti "to" + V1, boleh berubah bentuk mengikuti subject/tense.</li>
+      <li><strong>Must</strong> vs <strong>Have to</strong>: must = opini pribadi, have to = aturan eksternal.</li>
+      <li><strong>Must</strong> tidak punya bentuk lampau — pakai <strong>had to</strong>.</li>
+      <li><strong>Can</strong> tidak punya bentuk future/perfect — pakai <strong>be able to</strong>.</li>
+    </ul>
+  </div>
+
+</section>
+
+            <!-- Section: Passive Voice -->
+            <section id="passive-voice" class="page-section">
+
+  <style>
+    /* Tambahan khusus untuk tabel — belum ada di stylesheet utama */
+    #passive-voice table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    #passive-voice th, #passive-voice td {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    #passive-voice th {
+      background-color: var(--primary);
+      color: var(--white);
+      font-weight: 600;
+    }
+    #passive-voice td {
+      background-color: var(--white);
+    }
+    #passive-voice .note-box {
+      background-color: #e0e7ff;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      color: var(--dark);
+    }
+  </style>
+
+  <div class="section-header">
+    <h1>Passive Voice</h1>
+    <p>Kalimat di mana subject dikenai tindakan, bukan yang melakukan tindakan.</p>
+  </div>
+
+  <div class="note-box">
+    <strong>Catatan penempatan:</strong> Materi ini diletakkan setelah halaman "Modal Auxiliary", karena Passive Voice menggabungkan pemahaman To Be (dari materi pre-requisite) dan semua bentuk waktu di 16 Tenses.
+  </div>
+
+  <!-- 1. Definisi -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-circle-info"></i> 1. Definisi</h2>
+    <p><strong>Passive Voice</strong> (kalimat pasif) adalah kalimat di mana <strong>subject dikenai suatu tindakan</strong>, bukan yang melakukan tindakan. Lawannya adalah <strong>Active Voice</strong> (kalimat aktif), di mana subject adalah pelaku tindakan.</p>
+
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>Active Voice</h4>
+        <p>Chef <strong>cooks</strong> the food.</p>
+        <p><em>(Chef = pelaku)</em></p>
+      </div>
+      <div class="info-card">
+        <h4>Passive Voice</h4>
+        <p>The food <strong>is cooked</strong> by the chef.</p>
+        <p><em>(food = yang dikenai tindakan)</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Rumus Dasar -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-square-root-variable"></i> 2. Rumus Dasar</h2>
+
+    <div class="formula-box">
+      <ul>
+        <li>Subject (yang dikenai) + To Be + V3 (Past Participle) + (by + pelaku)</li>
+      </ul>
+    </div>
+
+    <h4 class="mt-20">Cara mengubah Active → Passive</h4>
+    <ol>
+      <li>Object pada kalimat aktif menjadi subject pada kalimat pasif</li>
+      <li>Verb diubah menjadi To Be + V3, To Be disesuaikan dengan tense aslinya</li>
+      <li>Subject pada kalimat aktif dipindah ke belakang, ditambah "by" (boleh dihilangkan jika pelaku tidak penting/tidak diketahui)</li>
+    </ol>
+
+    <div class="example-box">
+      <p>Active: <strong>She writes a letter.</strong></p>
+      <p>Passive: <strong>A letter is written by her.</strong></p>
+    </div>
+  </div>
+
+  <!-- 3. Tabel Perubahan Tiap Tense -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-table"></i> 3. Perubahan Aktif → Pasif di Setiap Tense</h2>
+    <p>Bagian To Be menyesuaikan tense kalimat aslinya, <strong>V3 selalu tetap</strong>.</p>
+
+    <table>
+      <thead><tr><th>Tense</th><th>Rumus Passive</th><th>Contoh</th></tr></thead>
+      <tbody>
+        <tr><td>Simple Present</td><td>S + am/is/are + V3</td><td>The room <strong>is cleaned</strong> every day.</td></tr>
+        <tr><td>Present Continuous</td><td>S + am/is/are + being + V3</td><td>The room <strong>is being cleaned</strong> now.</td></tr>
+        <tr><td>Present Perfect</td><td>S + have/has + been + V3</td><td>The room <strong>has been cleaned</strong>.</td></tr>
+        <tr><td>Simple Past</td><td>S + was/were + V3</td><td>The room <strong>was cleaned</strong> yesterday.</td></tr>
+        <tr><td>Past Continuous</td><td>S + was/were + being + V3</td><td>The room <strong>was being cleaned</strong> at 8 AM.</td></tr>
+        <tr><td>Past Perfect</td><td>S + had + been + V3</td><td>The room <strong>had been cleaned</strong> before I arrived.</td></tr>
+        <tr><td>Simple Future</td><td>S + will + be + V3</td><td>The room <strong>will be cleaned</strong> tomorrow.</td></tr>
+        <tr><td>Future Perfect</td><td>S + will + have + been + V3</td><td>The room <strong>will have been cleaned</strong> by noon.</td></tr>
+        <tr><td>Modal</td><td>S + Modal + be + V3</td><td>The room <strong>must be cleaned</strong>.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 4. Aturan Penting -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-gavel"></i> 4. Aturan Penting</h2>
+
+    <ol>
+      <li><strong>Hanya kalimat verbal (Transitive Verb)</strong> yang bisa diubah jadi pasif — verb harus punya object.
+        <br><em>❌ He sleeps → tidak bisa dipasifkan (tidak ada object)</em>
+      </li>
+      <li><strong>V3 selalu tetap</strong>, tidak berubah menurut tense — yang berubah adalah To Be di depannya</li>
+      <li><strong>"By + pelaku" boleh dihilangkan</strong> jika pelaku tidak diketahui, tidak penting, atau sudah jelas dari konteks
+        <br><em>The window was broken (oleh siapa tidak disebutkan)</em>
+      </li>
+      <li>Jika subject pada kalimat aktif adalah kata ganti, ubah ke bentuk objektif setelah "by"
+        <br><em>She helps me → I am helped by her (bukan "by she")</em>
+      </li>
+    </ol>
+
+    <div class="example-box">
+      <strong>Kesalahan Umum Pemula</strong>
+      <p>❌ <em>The food is cook by her.</em> → ✅ <em>The food is cooked by her.</em></p>
+      <p>❌ <em>The letter was write by him.</em> → ✅ <em>The letter was written by him.</em></p>
+      <p>❌ <em>A letter is written by she.</em> → ✅ <em>A letter is written by her.</em></p>
+    </div>
+  </div>
+
+  <!-- 5. Fungsi -->
+  <div class="card-box">
+    <h2><i class="fa-solid fa-bullseye"></i> 5. Fungsi/Kegunaan Passive Voice</h2>
+
+    <div class="grid-2">
+      <div class="info-card">
+        <h4>Menekankan objek/hasil</h4>
+        <p>Dipakai saat pelaku tidak penting atau tidak diketahui.</p>
+        <p><em>My phone was stolen.</em></p>
+      </div>
+      <div class="info-card">
+        <h4>Konteks formal/ilmiah</h4>
+        <p>Laporan penelitian, berita, atau instruksi teknis.</p>
+        <p><em>The experiment was conducted in a controlled environment.</em></p>
+      </div>
+      <div class="info-card">
+        <h4>Menghindari menyalahkan langsung</h4>
+        <p>Lebih sopan daripada menuding seseorang.</p>
+        <p><em>A mistake was made in the report.</em></p>
+      </div>
+      <div class="info-card">
+        <h4>Pelaku sudah jelas</h4>
+        <p>Tidak perlu disebut berulang.</p>
+        <p><em>He was arrested yesterday.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cheat Sheet -->
+  <div class="ref-answer-box">
+    <h4><i class="fa-solid fa-lightbulb"></i> Ringkasan Cepat (Cheat Sheet)</h4>
+    <ul>
+      <li>Rumus dasar: <strong>Subject + To Be + V3 + (by + pelaku)</strong></li>
+      <li>To Be menyesuaikan tense, <strong>V3 selalu tetap</strong></li>
+      <li>Hanya verb <strong>transitive</strong> (punya object) yang bisa dipasifkan</li>
+      <li><strong>"By + pelaku"</strong> boleh dihilangkan jika tidak penting/tidak diketahui</li>
+      <li>Kata ganti setelah "by" harus bentuk objektif: me, you, him, her, it, us, them</li>
+    </ul>
+  </div>
+
+</section>
+
             <!-- Section: Quiz -->
             <section id="quiz" class="page-section">
                 <div class="section-header">
@@ -348,7 +1070,7 @@
         </div>
     </div>
 
-    <script src="quiz-data.js?v=20260709"></script>
+    <script src="quiz-data.js?v=20260718"></script>
     <script src="script.js"></script>
 </body>
 </html>

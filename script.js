@@ -27,7 +27,7 @@ const tensesData = [
         formula: { pos: "S + have/has + been + V-ing + O", neg: "S + have/has + not + been + V-ing + O", int: "Have/has + S + been + V-ing + O?" },
         example: { pos: "He has been working here for 2 years.", neg: "He has not been working here for 2 years.", int: "Has he been working here for 2 years?" }
     },
-    
+
     // PAST TENSES
     {
         id: 5, name: "Simple Past Tense", category: "past",
@@ -119,14 +119,14 @@ const mobileClose = document.getElementById('mobile-close');
 function navigateTo(targetId) {
     // Hide all sections
     pageSections.forEach(sec => sec.classList.remove('active'));
-    
+
     // Show target section
     const targetSection = document.getElementById(targetId);
     if(targetSection) {
         targetSection.classList.add('active');
         window.scrollTo(0, 0);
     }
-    
+
     // Update active state on sidebar links
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
@@ -175,7 +175,7 @@ function renderTensesCards(filter = 'all') {
         const card = document.createElement('div');
         card.className = 'tense-card';
         card.setAttribute('data-category', tense.category);
-        
+
         let badgeColor, badgeText;
         switch(tense.category) {
             case 'present': badgeColor = 'background: #D1FAE5; color: #10B981;'; badgeText = 'Present'; break;
@@ -200,7 +200,7 @@ function renderTensesCards(filter = 'all') {
 function openModal(tense) {
     document.getElementById('modal-title').textContent = tense.name;
     document.getElementById('modal-function').textContent = tense.function;
-    
+
     let badgeColor, badgeText;
     switch(tense.category) {
         case 'present': badgeColor = 'background: #D1FAE5; color: #10B981;'; badgeText = 'Present'; break;
@@ -227,11 +227,11 @@ function openModal(tense) {
         case 'future': mainColor = '#3B82F6'; break;
         case 'past-future': mainColor = '#8B5CF6'; break;
     }
-    
+
     document.querySelectorAll('.formula-box, .example-box').forEach(box => {
         box.style.borderLeftColor = mainColor;
     });
-    
+
     document.querySelectorAll('.info-group h3, .formula-box strong, .example-box strong').forEach(el => {
         el.style.color = mainColor;
     });
@@ -263,7 +263,7 @@ const quizControls = document.querySelector('.quiz-controls');
 const quizArea = document.getElementById('quiz-area');
 const quizResult = document.getElementById('quiz-result');
 const startQuizBtn = document.getElementById('start-quiz-btn');
-const quizFormatSelect = document.getElementById('quiz-format'); 
+const quizFormatSelect = document.getElementById('quiz-format');
 
 const questionText = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
@@ -274,7 +274,7 @@ const nextQuestionBtn = document.getElementById('next-question-btn');
 
 startQuizBtn.addEventListener('click', () => {
     currentQuizFormat = quizFormatSelect.value;
-    
+
     // Check if quizData is available (from quiz-data.js)
     if (typeof quizData === 'undefined' || !quizData[currentQuizFormat]) {
         alert("Data soal belum tersedia. Pastikan quiz-data.js sudah dimuat.");
@@ -284,7 +284,7 @@ startQuizBtn.addEventListener('click', () => {
     currentQuizQuestions = [...quizData[currentQuizFormat]];
     // Shuffle
     currentQuizQuestions.sort(() => Math.random() - 0.5);
-    
+
     if(currentQuizQuestions.length === 0) {
         alert("Belum ada soal untuk format ini.");
         return;
@@ -292,11 +292,11 @@ startQuizBtn.addEventListener('click', () => {
 
     currentQuestionIndex = 0;
     score = 0;
-    
+
     quizControls.classList.add('hidden');
     quizResult.classList.add('hidden');
     quizArea.classList.remove('hidden');
-    
+
     loadQuestion();
 });
 
@@ -305,18 +305,18 @@ function loadQuestion() {
     submitAnswerBtn.disabled = true;
     submitAnswerBtn.classList.remove('hidden');
     nextQuestionBtn.classList.add('hidden');
-    
+
     if (currentQuizFormat === 'essay') {
         submitAnswerBtn.textContent = 'Lihat Jawaban Benar';
         submitAnswerBtn.disabled = false;
     } else {
         submitAnswerBtn.textContent = 'Jawab';
     }
-    
+
     const currentQ = currentQuizQuestions[currentQuestionIndex];
     currentQNum.textContent = currentQuestionIndex + 1;
     totalQNum.textContent = currentQuizQuestions.length;
-    
+
     questionText.innerHTML = '';
     optionsContainer.innerHTML = '';
 
@@ -350,7 +350,7 @@ function loadQuestion() {
         let qContainer = document.createElement('div');
         qContainer.style.fontSize = '1.2rem';
         qContainer.style.lineHeight = '2';
-        
+
         let optIndex = 0;
         textParts.forEach(part => {
             if (part.startsWith('{') && part.endsWith('}')) {
@@ -401,7 +401,7 @@ submitAnswerBtn.addEventListener('click', () => {
         const input = document.querySelector('.quiz-input');
         const userAnswer = input.value.trim().toLowerCase();
         const correctAnswer = currentQ.answer.toLowerCase();
-        
+
         if (userAnswer === correctAnswer) {
             input.style.borderColor = 'var(--secondary)';
             input.style.backgroundColor = '#d1fae5';
@@ -409,7 +409,7 @@ submitAnswerBtn.addEventListener('click', () => {
         } else {
             input.style.borderColor = '#ef4444';
             input.style.backgroundColor = '#fee2e2';
-            
+
             const ref = document.createElement('div');
             ref.className = 'ref-answer-box';
             ref.innerHTML = `<h4>Jawaban Benar:</h4><p>${currentQ.answer}</p>`;
@@ -431,7 +431,16 @@ submitAnswerBtn.addEventListener('click', () => {
         ref.innerHTML = `<h4>Referensi Jawaban Benar:</h4><p>${currentQ.ref_answer}</p>`;
         optionsContainer.appendChild(ref);
     }
-    
+
+    // Tampilkan penjelasan (kenapa jawaban benar/salah) jika tersedia,
+    // merujuk pada materi terkait di halaman.
+    if (currentQ.explanation) {
+        const explBox = document.createElement('div');
+        explBox.className = 'ref-answer-box';
+        explBox.innerHTML = `<h4><i class="fa-solid fa-lightbulb"></i> Penjelasan:</h4><p>${currentQ.explanation}</p>`;
+        optionsContainer.appendChild(explBox);
+    }
+
     if (currentQuestionIndex === currentQuizQuestions.length - 1) {
         nextQuestionBtn.textContent = 'Lihat Hasil';
     } else {
@@ -451,9 +460,9 @@ nextQuestionBtn.addEventListener('click', () => {
 function showResult() {
     quizArea.classList.add('hidden');
     quizResult.classList.remove('hidden');
-    
+
     const percentage = Math.round((score / currentQuizQuestions.length) * 100);
-    
+
     if (currentQuizFormat === 'essay') {
         document.getElementById('final-score').textContent = "- ";
         document.getElementById('score-message').textContent = 'Latihan Uraian selesai! Evaluasi jawaban Anda secara mandiri.';
